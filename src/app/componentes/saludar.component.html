@@ -1,0 +1,18 @@
+<h1>Mi primer componente del archivo </h1>
+<br>
+<small>saludar.component.html</small>
+<input type="text" name="" id="">
+<p>Soy un parrafo</p>
+
+<div>
+
+    <input type="text"   [value]="nombreLista" (Lista)="onButtonClick($event)"autofocus>
+    <br>
+    <button (click)="onButtonClick()">Añadir nombre</button>
+
+</div>
+
+
+<p (click) ="onClick()">
+    Hola {{nombre}}
+</p>
