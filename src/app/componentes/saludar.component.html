@@ -6,7 +6,7 @@
 
 <div>
 
-    <input type="text"   [value]="nombreLista" (Lista)="onButtonClick($event)"autofocus>
+    <input type="text"   [(ngModel)]="nombreLista">
     <br>
     <button (click)="onButtonClick()">Añadir nombre</button>
 

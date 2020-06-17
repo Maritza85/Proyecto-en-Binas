@@ -14,13 +14,8 @@ export class SaludarComponent{
     @Output() saludar: EventEmitter<string> =new EventEmitter<string>();
 
 
-    @Output() Lista:EventEmitter<string>=new EventEmitter<string>();
-
     public nombres: Array<string>=[];
-    public nombreLista:string="Efren";
-    
-
-    
+    public nombreLista: string="Efren";
     
     constructor(){
     }
@@ -31,9 +26,9 @@ export class SaludarComponent{
 
     onButtonClick(){
         this.nombres.push(this.nombreLista);
-        this.nombreLista;
-        this.Lista.emit(this.nombreLista);
+        this.nombreLista='';
         console.log(this.nombres);
     }
+    
     
 }
