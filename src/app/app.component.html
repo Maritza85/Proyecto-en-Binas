@@ -1,6 +1,10 @@
 <div>
-    <h1>Componente app.component.html</h1>
-    <p>
+    <h1 
+    [stule.font-size.%]="mivariable.nombreLista.length > 0 ? 100 : 250"
+    [style.color]="mivariable.nombreLista.length > 0 ? 'red' : 'blue'">
+        Componente app.component.html
+    </h1>
+    <p [class.invisible]="mivariable.nombreLista.length == 0">
         Escribiendo: <strong>{{mivariable.nombreLista}}</strong>
     </p>
 </div>
