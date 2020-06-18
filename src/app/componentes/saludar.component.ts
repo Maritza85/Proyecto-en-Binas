@@ -15,7 +15,7 @@ export class SaludarComponent{
 
 
     public nombres: Array<string>=[];
-    public nombreLista: string="Efren";
+    public nombreLista: string="";
     
     constructor(){
     }
@@ -29,6 +29,6 @@ export class SaludarComponent{
         this.nombreLista='';
         console.log(this.nombres);
     }
-    
+
     
 }
