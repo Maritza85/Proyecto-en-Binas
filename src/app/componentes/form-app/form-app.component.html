@@ -1,0 +1,72 @@
+<h1>Validacion De Formulario</h1>
+
+<form [formGroup]="form" (ngSubmit)="save($event)">
+    <p>
+      Nombre: <br/>
+      <input type="text" formControlName="name">
+    </p>
+    <div *ngIf="form.get('name').errors && form.get('name').touched">
+        <p *ngIf="form.get('name').hasError('required')">
+          Es un campo requerido
+        </p>
+    </div>
+    <p>
+      Fecha De Nacimiento: <br/>
+      <input type="date" formControlName="date">
+    </p>
+    <div *ngIf="form.get('date').errors && form.get('date').touched">
+        <p *ngIf="form.get('date').hasError('required')">
+          Es un campo requerido
+        </p>
+    </div>
+    <p>
+      Email: <br/>
+      <input type="email" formControlName="email">
+    </p>
+    <div *ngIf="form.get('email').errors && form.get('email').touched">
+        <p *ngIf="form.get('email').hasError('required')">
+          Es un campo requerido
+        </p>
+        <p *ngIf="form.get('email').hasError('email')">
+          No es un email
+        </p>
+    </div>
+    <p>
+      Texto largo: <br/>
+      <textarea cols="30" rows="10" formControlName="text"></textarea>
+      {{form.get('text').value.length}}/80
+    </p>
+    <div *ngIf="form.get('text').errors && form.get('text').touched">
+        <p *ngIf="form.get('text').hasError('required')">
+          Es un campo requerido
+        </p>
+        <p *ngIf="form.get('text').hasError('maxlength')">
+          Te pasaste, máximo deben haber 80 caracteres.
+        </p>
+      </div>
+    <p>
+      Category: <br/>
+      <select formControlName="category">
+        <option value="1">Category 1</option>
+        <option value="2">Category 2</option>
+        <option value="3">Category 3</option>
+      </select>
+    </p>
+    <div *ngIf="form.get('category').errors && form.get('category').touched">
+        <p *ngIf="form.get('category').hasError('required')">
+          Es un campo requerido
+        </p>
+    </div>
+    <p>
+      Genero: <br/>
+      <input type="radio" name="gender" formControlName="gender" value="male"> Male<br>
+      <input type="radio" name="gender" formControlName="gender" value="female"> Female<br>
+      <input type="radio" name="gender" formControlName="gender" value="other"> Other
+    </p>
+    <div *ngIf="form.get('gender').errors && form.get('gender').touched">
+        <p *ngIf="form.get('gender').hasError('required')">
+          Es un campo requerido
+        </p>
+    </div>
+    <button type="submit">Guardar</button> 
+  </form>
