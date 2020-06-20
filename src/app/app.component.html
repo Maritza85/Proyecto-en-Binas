@@ -10,3 +10,7 @@
 </div>
 <saludar-app #mivariable [nombre] ="name"  (saludar)="onSaludar($event)"> </saludar-app>
 <app-form-app></app-form-app>
+<br>
+<button (click)="variable=!variable">Agregar</button>
+<br>
+<app-add-app *ngIf="variable"></app-add-app>

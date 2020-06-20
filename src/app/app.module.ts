@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { SaludarComponent } from './componentes/saludar.component';
 import{ FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { FormAppComponent } from './componentes/form-app/form-app.component';
+import { AddAppComponent } from './componentes/add-app/add-app.component';
 
 
 @NgModule({
@@ -12,6 +13,7 @@ import { FormAppComponent } from './componentes/form-app/form-app.component';
     AppComponent,
     SaludarComponent,
     FormAppComponent,
+    AddAppComponent,
    
   ],
   imports: [

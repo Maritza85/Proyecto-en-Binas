@@ -1,0 +1,59 @@
+
+<br>
+<div >
+    <h1>Validacion Para Dar De Alta Registros</h1>
+    <form [formGroup]="form" (ngSubmit)="agregar($event)">
+        <p>
+            ID: <br/>
+            <input type="number" formControlName = "Id">
+        </p>
+        <div *ngIf="form.get('Id').errors && form.get('Id').touched">
+            <p *ngIf="form.get('Id').hasError('required')">
+            Es un campo requerido
+            </p>
+            <p *ngIf="form.get('Id').hasError('min')">
+                ID invalido
+            </p>
+            <p *ngIf="form.get('Id').hasError('max')">
+                ID invalido
+            </p>
+        </div>
+        <p>
+            Nombre: <br/>
+            <input type="text" formControlName = "nombre">
+        </p>
+        <div *ngIf="form.get('nombre').errors && form.get('nombre').touched">
+            <p *ngIf="form.get('nombre').hasError('required')">
+            Es un campo requerido
+            </p>
+        </div>
+        
+        <p>
+            Genero: <br/>
+            <input type="radio" formControlName = "gender" value="male"> Masculino<br>
+            <input type="radio" formControlName = "gender" value="female"> Femenino<br>
+        </p>
+        <div *ngIf="form.get('gender').errors && form.get('gender').touched">
+            <p *ngIf="form.get('gender').hasError('required')">
+            Es un campo requerido
+            </p>
+        </div>
+        <p>
+            Año De Nacimiento: <br/>
+            <input type="number" formControlName = "nacimiento" >
+        </p>
+        <div *ngIf="form.get('nacimiento').errors && form.get('nacimiento').touched">
+            <p *ngIf="form.get('nacimiento').hasError('required')">
+            Es un campo requerido
+            </p>
+            <p *ngIf="form.get('nacimiento').hasError('min')">
+                El año tiene que ser mayor a 1980
+            </p>
+            <p *ngIf="form.get('nacimiento').hasError('max')">
+                El año tiene que ser menor a 2010
+            </p>
+
+        </div>
+        <button type="submit">Agregar</button>
+    </form>
+</div>
