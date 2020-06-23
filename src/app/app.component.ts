@@ -18,4 +18,13 @@ export class AppComponent {
     console.log(mensaje)
   }
 
+  validando(texto:string){
+    return{
+      'weak': texto.length < 4,
+      'medium': texto.length >= 4 && texto.length <= 7,
+      'strong': texto.length > 7
+    }
+
+  }
+
 }
