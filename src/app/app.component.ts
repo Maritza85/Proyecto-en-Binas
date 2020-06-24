@@ -20,9 +20,12 @@ export class AppComponent {
 
   validando(texto:string){
     return{
-      'weak': texto.length < 4,
-      'medium': texto.length >= 4 && texto.length <= 7,
-      'strong': texto.length > 7
+      'weak' : texto.length < 5,
+      'progress-bar bg-danger':texto.length < 5,
+      'medium': texto.length >= 5 && texto.length < 9,
+      'progress-bar bg-warning': texto.length >= 5 && texto.length < 9,
+      'strong': texto.length >=9,
+      'progress-bar bg-successs': texto.length >=9
     }
 
   }

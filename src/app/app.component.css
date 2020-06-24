@@ -1,6 +1,7 @@
 .invisible{
 	visibility:hidden;
 }
+
 .weak{
 	color: red;
 
@@ -11,5 +12,5 @@
 }
 
 .strong{
-	color: greenyellow;
+	color: blue;
 }

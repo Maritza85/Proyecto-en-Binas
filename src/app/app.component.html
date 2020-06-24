@@ -7,9 +7,21 @@
   
 </div>
 <saludar-app #mivariable [nombre] ="name"  (saludar)="onSaludar($event)"> </saludar-app>
-<p [class.invisible]="mivariable.nombreLista.length == 0">
-    Escribiendo: <span [ngClass]="validando(mivariable.nombreLista)">{{mivariable.nombreLista}}</span> 
-</p>
+
+
+    <p [class.invisible]="mivariable.nombreLista.length == 0">  
+        
+    </p>
+        <p>
+           Escribiendo <span [ngClass]="validando(mivariable.nombreLista)">{{mivariable.nombreLista}}</span>
+        </p>
+        
+            <div  class="progress-bar bg-danger d-none" role="progressbar" style="width: 33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" >Debil</div>
+        
+            <div  class="progress-bar bg-warning d-none" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100">Media </div>
+      
+            <div class="progress-bar bg-success d-none" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="70">Alta</div>
+      
 
 <app-form-app></app-form-app>
 <br>
